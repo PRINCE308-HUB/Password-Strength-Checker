@@ -102,7 +102,7 @@ Possible future upgrades:
 
 ## 👨‍💻 Author
 
-Developed by Flash.
+Developed by Prince.
 
 ---
 
