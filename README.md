@@ -6,6 +6,12 @@ The application provides real-time password security analysis, visual strength i
 
 ---
 
+## 🌐 Live Demo
+
+👉 [Open SecurePass](https://prince308-hub.github.io/Password-Strength-Checker/)
+
+---
+
 ## 🚀 Features
 
 ### ✅ Real-Time Password Analysis
