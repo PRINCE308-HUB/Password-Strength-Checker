@@ -359,7 +359,39 @@ header p { color: var(--muted); font-size: 14px; font-weight: 300; transition: c
   font-size: 11px; color: var(--accent); font-family: 'Space Mono', monospace;
   text-align: center; margin-top: 8px; min-height: 16px; letter-spacing: 0.06em;
 }
+/* ── FOOTER ── */
+.footer {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+
+  color: var(--muted);
+  opacity: 0.9;
+}
+
+.footer-brand {
+  color: var(--muted);
+}
+
+.footer-dash {
+  color: var(--muted);
+}
+
+.footer-secure {
+  color: var(--accent);
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0,229,160,0.35);
+}
 
 </style>
 </head>
@@ -710,5 +742,11 @@ document.getElementById('copy-btn').addEventListener('click',()=>{
 
 generate();
 </script>
+<!-- FOOTER -->
+<footer class="footer">
+  <span class="footer-brand">SecurePass</span>
+  <span class="footer-dash">—</span>
+  <span class="footer-secure">Stay Secure</span>
+</footer>
 </body>
 </html>
