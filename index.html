@@ -55,7 +55,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,8 +157,6 @@ header p { color: var(--muted); font-size: 14px; font-weight: 300; transition: c
 .slide-viewport {
   overflow: hidden;
   border-radius: 16px;
-  /* limit height so panels scroll internally */
-  max-height: 72vh;
 }
 .slide-track {
   display: flex;
@@ -171,20 +169,22 @@ header p { color: var(--muted); font-size: 14px; font-weight: 300; transition: c
 .panel {
   width: 50%;
   flex-shrink: 0;
-  max-height: 72vh;
+}
+
+/* Only checker panel scrolls, scrollbar hidden */
+#panel-check {
+  max-height: 75vh;
   overflow-y: auto;
-  border-radius: 16px;
-  /* hide scrollbar visually but keep it functional */
   scrollbar-width: none;
 }
-.panel::-webkit-scrollbar { display: none; }
+#panel-check::-webkit-scrollbar { display: none; }
 
 /* ── CARD ── */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.75rem;
   transition: background 0.45s, border-color 0.45s;
   box-shadow: 0 0 60px rgba(0,0,0,0.18);
 }
@@ -217,7 +217,7 @@ header p { color: var(--muted); font-size: 14px; font-weight: 300; transition: c
 .strength-label .level { font-weight: 700; letter-spacing: 0.05em; transition: color 0.3s; }
 .bar-track {
   height: 6px; background: var(--surface2); border-radius: 3px;
-  overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border);
+  overflow: hidden; margin-bottom: 1.25rem; border: 1px solid var(--border);
   transition: background 0.45s;
 }
 .bar-fill {
@@ -228,9 +228,9 @@ header p { color: var(--muted); font-size: 14px; font-weight: 300; transition: c
 /* ── SCORE ── */
 .score-section {
   display: flex; align-items: center; gap: 1.25rem;
-  padding: 0.85rem 1rem; background: var(--surface2);
+  padding: 1rem 1.25rem; background: var(--surface2);
   border-radius: 10px; border: 1px solid var(--border);
-  margin-bottom: 1rem; transition: background 0.45s, border-color 0.45s;
+  margin-bottom: 1.25rem; transition: background 0.45s, border-color 0.45s;
 }
 .score-info .score-num {
   font-family: 'Space Mono', monospace; font-size: 2rem;
@@ -278,15 +278,15 @@ header p { color: var(--muted); font-size: 14px; font-weight: 300; transition: c
 }
 
 /* ── SUGGESTIONS ── */
-.suggestions { margin-top: 0.75rem; }
+.suggestions { margin-top: 1rem; }
 .sug-title {
   font-size: 11px; font-family: 'Space Mono', monospace;
   letter-spacing: 0.1em; color: var(--muted);
-  margin-bottom: 6px; text-transform: uppercase;
+  margin-bottom: 8px; text-transform: uppercase;
 }
 .sug-item {
   display: flex; align-items: flex-start; gap: 8px;
-  font-size: 12px; color: var(--muted); padding: 3px 0;
+  font-size: 13px; color: var(--muted); padding: 4px 0;
 }
 .sug-arrow { color: var(--accent); flex-shrink: 0; margin-top: 1px; }
 
@@ -360,14 +360,7 @@ header p { color: var(--muted); font-size: 14px; font-weight: 300; transition: c
   text-align: center; margin-top: 8px; min-height: 16px; letter-spacing: 0.06em;
 }
 
-/* ── FOOTER ── */
-footer {
-  text-align: center; margin-top: 1.25rem;
-  font-size: 12px; color: var(--muted);
-  font-family: 'Space Mono', monospace; letter-spacing: 0.05em;
-  position: relative; z-index: 1;
-}
-footer span { color: var(--accent); }
+
 </style>
 </head>
 <body>
@@ -406,7 +399,7 @@ footer span { color: var(--accent); }
     <div class="slide-track" id="slide-track">
 
       <!-- PANEL 1: CHECKER -->
-      <div class="panel">
+      <div class="panel" id="panel-check">
         <div class="card">
           <div class="input-wrap">
             <input class="pw-input" id="pw-input" type="password"
@@ -463,7 +456,6 @@ footer span { color: var(--accent); }
     </div>
   </div>
 
-  <footer>SecurePass &mdash; <span>Stay Secure</span></footer>
 </div>
 
 <script>
