@@ -279,6 +279,41 @@ header p { color: var(--muted); font-size: 14px; font-weight: 300; transition: c
   transition: color 0.45s;
 }
 .footer span { color: var(--accent); }
+
+/* ── MOBILE ── */
+@media (max-width: 540px) {
+  body { padding: 1.2rem 0.75rem 2rem; }
+
+  h1 { font-size: 1.5rem; }
+  header { margin-bottom: 1.25rem; }
+  header p { font-size: 13px; }
+
+  .theme-btn { top: 0.75rem; right: 0.75rem; padding: 5px 11px; font-size: 10px; }
+
+  .card { padding: 1.25rem; }
+
+  .pw-input { font-size: 13px; padding: 12px 44px 12px 13px; }
+
+  .checks { grid-template-columns: 1fr; }
+
+  .score-section { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 0.9rem 1rem; }
+  .score-info .score-num { font-size: 1.6rem; }
+
+  .crack-time { font-size: 11px; }
+
+  .tab-btn { font-size: 11px; gap: 5px; }
+
+  .gen-options { gap: 8px; }
+  .gen-opt { font-size: 11px; }
+
+  .gen-pw-text { font-size: 14px; }
+
+  .btn { font-size: 11px; padding: 10px 0; }
+
+  .sug-item { font-size: 12px; }
+
+  .warn-banner { font-size: 12px; }
+}
 </style>
 </head>
 <body>
