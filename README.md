@@ -1,64 +1,65 @@
-# 🔒 SecurePass — Password Strength Analyzer
+# 🔒 SecurePass — Advanced Password Strength Analyzer
 
-SecurePass is a modern cybersecurity-inspired password strength checker built using HTML, CSS, and JavaScript.
+SecurePass is a modern cybersecurity-inspired password strength analyzer and secure password generator built using HTML, CSS, and JavaScript.
 
-The application provides real-time password security analysis, visual strength indicators, crack-time estimation, and a secure password generator — all inside a sleek futuristic UI.
+The application provides real-time password security analysis, visual strength indicators, crack-time estimation, common password detection, and a secure password generator — all inside a sleek futuristic cybersecurity-themed interface.
 
 ---
 
 ## 🌐 Live Demo
 
-👉 [Open SecurePass](https://prince308-hub.github.io/Password-Strength-Checker/)
+👉 [Launch SecurePass](https://prince308-hub.github.io/Password-Strength-Checker/)
 
 ---
 
 ## 🚀 Features
 
 ### ✅ Real-Time Password Analysis
-- Instant password strength detection
+- Instant password strength evaluation
 - Dynamic security scoring system
-- Live visual feedback while typing
+- Live feedback while typing
 
-### ✅ Security Checks
+### ✅ Advanced Security Checks
 - Minimum length validation
-- Uppercase & lowercase detection
+- Uppercase letter detection
+- Lowercase letter detection
 - Number detection
-- Symbol detection
+- Special symbol detection
 - Repeated character detection
 - Sequential pattern detection
 
-### ✅ Strength Meter
+### ✅ Visual Strength Meter
 - Animated progress bar
-- Circular score indicator
-- Color-based security levels:
+- Circular strength indicator
+- Color-coded security levels:
   - Weak
   - Medium
   - Strong
 
 ### ✅ Crack Time Estimation
-Estimates how difficult the password would be to crack based on complexity.
+Estimates password crack difficulty based on complexity and character diversity.
 
 ### ✅ Common Password Detection
-Detects weak passwords such as:
+Detects weak and commonly used passwords such as:
 - password
 - 123456
 - qwerty
 - admin
 
-### ✅ Password Generator
-Built-in secure password generator with:
-- Adjustable length
-- Uppercase option
-- Lowercase option
-- Numbers option
-- Symbols option
-- One-click clipboard copy
+### ✅ Secure Password Generator
+Includes a customizable password generator with:
+- Adjustable password length
+- Uppercase letters
+- Lowercase letters
+- Numbers
+- Symbols
+- One-click copy to clipboard
 
 ### ✅ Modern Cybersecurity UI
-- Dark futuristic theme
-- Responsive layout
-- Smooth transitions & animations
-- Cyber-inspired typography
+- Futuristic dark theme
+- Fully responsive design
+- Smooth animations and transitions
+- Cyber-inspired styling and typography
 
 ---
 
@@ -91,18 +92,6 @@ SecurePass/
 ├── index.html
 └── README.md
 ```
-
----
-
-## 🎯 Future Improvements
-
-Possible future upgrades:
-- Dark/Light mode toggle
-- Password breach API integration
-- Password history checker
-- AI-generated password suggestions
-- Export generated passwords securely
-- Authentication system integration
 
 ---
 
